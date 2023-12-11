@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Type attribute is same as Type registry key (Standard, Translator, Plugin (Server only) -->
+<Addin Type="Standard">
+
+  <ClassId>{91243c24-5714-45cb-96e3-c603638d598f}</ClassId>
+  <ClientId>{91243c24-5714-45cb-96e3-c603638d598f}</ClientId>
+  <DisplayName Language="1033">MyTestAddin_Inventor</DisplayName>
+  <Description>just a test</Description>
+  <Assembly>MyTestAddin_Inventor.dll</Assembly>
+  <SupportedSoftwareVersionGreaterThan>19..</SupportedSoftwareVersionGreaterThan>
+  <LoadAutomatically>0</LoadAutomatically>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <LoadBehavior>0</LoadBehavior>
+  <UserUnloadable>1</UserUnloadable>
+  <Hidden>0</Hidden>
+</Addin>

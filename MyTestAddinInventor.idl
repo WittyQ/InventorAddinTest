@@ -1,0 +1,40 @@
+// MyTestAddin_Inventor.idl : IDL source for MyTestAddin_Inventor
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MyTestAddinInventor.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(7c4b7cd7-f183-4ee8-af2a-4613fbd16b91),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IMyTestEnvent : IDispatch
+{
+	[id(1)] HRESULT Activate([in] IDispatch* pDisp, [in] VARIANT_BOOL FirstTime);
+	[id(2)] HRESULT Deactivate();
+	[id(3)] HRESULT ExecuteCommand([in] long CommandID);
+	[propget, id(4)] HRESULT Automation([out, retval] IDispatch** Result);
+};
+[
+	uuid(a60d8bcf-eaf9-4604-b0b4-5c6e8d54d96e),
+	version(1.0),
+]
+library MyTestAddinInventorLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(91243c24-5714-45cb-96e3-c603638d598f)
+	]
+	coclass MyTestEnvent
+	{
+		[default] interface IMyTestEnvent;
+	};
+};
+
+import "shobjidl.idl";
